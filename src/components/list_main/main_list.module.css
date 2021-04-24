@@ -1,0 +1,28 @@
+.main_list {
+
+}
+
+.main_list__head {
+	max-height: 250px;
+	overflow: hidden;
+}
+.main_list__head img {
+	width: 100%;
+}
+
+.main_list__profil {
+	display: flex;
+}
+
+.main_list__profil img {
+	width: 150px;
+}
+
+
+.list{
+	color:grey;
+}
+
+.list.active{
+	color:red;
+}

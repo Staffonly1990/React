@@ -1,0 +1,9 @@
+.messag_list{
+	background-color: red;
+	display: grid;
+	grid-template-areas: 'friends message' ;
+}
+
+
+
+
