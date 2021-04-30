@@ -8,9 +8,13 @@ const Friends = (props) => {
 		<div className={classes.friends} >
 			<ul>
 				{
-					props.friends.map(
+					props.dispatch('setAllObj', '').friends_list.map(
 						friend => (
-							<li><NavLink activeClassName={classes.active} to={`/messages/${friend.name}`}>{friend.name}</NavLink></li>
+							<li key={friend.id} >
+								<NavLink activeClassName={classes.active} to={`/messages/${friend.name}`}>
+									{friend.name} ({friend.age})
+								</NavLink>
+							</li>
 						))
 				}
 			</ul>

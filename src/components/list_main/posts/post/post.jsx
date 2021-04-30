@@ -3,10 +3,17 @@ import classes from './post.module.css';
 function Post(props) {
 	return (
 
-		<div className={classes.myPosts__post}>
-			{props.masseg}
-			<p>лайков = {props.like}</p>
-		</div>)
+		<div>
+			{
+				props.posts.map(post =>
+					<div className={classes.myPosts__post}>
+						{post.text}
+						<p> лайков = {post.like} </p>
+					</div>)
+			}
+
+		</div>
+	)
 }
 
-export {Post,};
+export { Post, };

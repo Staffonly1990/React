@@ -1,7 +1,7 @@
 import classes from './main_list.module.css';
-import {Posts} from './posts/posts'
+import { Posts } from './posts/posts'
 
-function Main_list() {
+function Main_list(props) {
   return (
     <div className={classes.main_list} >
       <div className={classes.main_list__head} >
@@ -24,7 +24,7 @@ function Main_list() {
           </div>
         </div>
       </div>
-      <Posts/>
+      <Posts dispatch={props.dispatch} objPosts={props.objPosts}/>
     </div>
   )
 }

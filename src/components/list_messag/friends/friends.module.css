@@ -1,7 +1,8 @@
+.friends{
+	grid-area: friends;
+}
+
 .active{
 	color:black;
 }
 
-.friends{
-	grid-area: friends;
-}

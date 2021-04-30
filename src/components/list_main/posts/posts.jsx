@@ -1,19 +1,33 @@
 import classes from './posts.module.css'
-import {Post} from './post/post'
+import { Post } from './post/post'
+import React from 'react'
 
-function Posts() {
+let Text_INPUT = React.createRef()
+
+
+
+function Posts(props) {
+	let AddPost = ()=>{
+		props.dispatch('AddPost','')
+	}
+	
+	const new_text=()=>{
+		let text = Text_INPUT.current.value
+		props.dispatch('NewTextPost',text)
+	}
+
+
 	return (
 		<div className='myPosts'>
 			<div className='myPosts__head'>
 				Мои посты
           </div>
-			<form className='myPosts__form'>
-				<input type="text" name="post"></input>
-				<button>Отправить</button>
-			</form>
-			<Post masseg='Text 1' like = '6' />
-			<Post masseg='Text 2' like = '0'/>
+			<div className='myPosts__form'>
+				<textarea onChange={new_text} name="post" ref={Text_INPUT} value={props.dispatch('setAllObj','').defoul_text} />
+				<button onClick={AddPost}>Отправить</button>
+			</div>
+			<Post posts={props.dispatch('setAllObj','').post_list} />
 		</div>)
 }
 
-export {Posts,}
+export { Posts, }

@@ -10,6 +10,7 @@ function Sidebar() {
 				<li><NavLink activeClassName={classes.active} to='/news' >News</NavLink></li>
 				<li><NavLink activeClassName={classes.active} to='/music' >Music</NavLink></li>
 				<li><NavLink activeClassName={classes.active} to='/settings' >Settings</NavLink></li>
+				<li><NavLink activeClassName={classes.active} to='/friends' >Friends</NavLink></li>
 			</ul>
 		</div>
 	)
